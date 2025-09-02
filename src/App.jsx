@@ -45,7 +45,7 @@ function NoteItem({ note, onUpdate, onDelete, onSummarize }) {
             //console.log(`http://localhost:4000/uploads/${note.audioPath}`)
           }
           {note.audioPath && (
-            <audio controls src={`http://localhost:4000/uploads/${note.audioPath}`} ></audio>
+            <audio controls src={`${import.meta.env.VITE_API_BASE}/uploads/${note.audioPath}`} ></audio>
           )}
           <p style={{ whiteSpace: 'pre-wrap' }}><strong>Transcript:</strong> {note.transcript}</p>
           <div>
